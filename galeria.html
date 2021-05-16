@@ -7,10 +7,134 @@
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.validate.js"></script>
-        
+        <script>
+          $(function() 
+          {
+            $("#eugen").click(function(){
+              $('#modal-eugen').modal()
+            });
+            $("#yamato").click(function(){
+              $('#modal-yamato').modal()
+            });
+            $("#scharnhorst").click(function(){
+              $('#modal-scharnhorst').modal()
+            });
+            
+            $("#graf").click(function(){
+              $('#modal-graf').modal()
+            });
+            $("#hood").click(function(){
+              $('#modal-hood').modal()
+            });
+            $("#moreno").click(function(){
+              $('#modal-moreno').modal()
+            });
+        }); 
+    
+      </script>
     </head>
     <body>
+<div class="modal fade" tabindex="-1" role="dialog" id="modal-moreno">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="moda-header">
+        <h4>
+          ARA Moreno
+        </h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          acorazado argentino clase dreadnought, precio visita guiada=20.000$, lunes a viernes de 8 de la manana a 9 de la tarde.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
+<div class="modal fade" tabindex="-1" role="dialog" id="modal-eugen">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="moda-header">
+        <h4>
+          Prinz Eugen
+        </h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          Crucero Aleman clase Almirante Hipper, precio visita guiada=15.000$, lunes a viernes de 8 de la manana a 9 de la tarde.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="modal-yamato">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="moda-header">
+        <h4>
+         Yamato
+        </h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          Acorazado Japones clase Yamato, precio visita guiada=60.000$, lunes a viernes de 8 de la manana a 9 de la tarde.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="modal-scharnhorst">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="moda-header">
+        <h4>
+          Scharnhorst
+        </h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          Acorazado Aleman clase gneisenau, precio visita guiada=40.000$, lunes a viernes de 8 de la manana a 9 de la tarde.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="modal-graf">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="moda-header">
+        <h4>
+          Graf Spee
+        </h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          Crucero Aleman clase Panzerschiff, precio visita guiada=15.000$, lunes a viernes de 8 de la manana a 9 de la tarde.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="modal-hood">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="moda-header">
+        <h4>
+          HMS hood
+        </h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          Acorazado Britanico clase Almirante, precio visita guiada=40.000$, lunes a viernes de 8 de la manana a 9 de la tarde.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
         <!-- MENU -->
         <nav class="navbar navbar-default">
             <div class="container-fluid">
@@ -34,7 +158,7 @@
             <div class="col-md-4">
               <div class="thumbnail">
                 <a href="#">
-                  <img src="images/moreno.jfif" onclick="alert('descripcicon: acorazado argentino clase dreadnought, precio visita guiada=20.000$, lunes a viernes de 8 de la manana a 9 de la tarde.');"  width="304" height="236">
+                  <img src="images/moreno.jfif" id="moreno" width="304" height="236">
                   <div class="caption">
                     <p> ARA Moreno</p>
                   </div>
@@ -44,7 +168,7 @@
             <div class="col-md-4">
               <div class="thumbnail">
                 <a href="#">
-                  <img src="images/scharnhorst.jfif" onclick="alert('descripcion: Acorazado Aleman clase gneisenau, precio visita guiada=40.000$, lunes a viernes de 8 de la manana a 9 de la tarde.');"  width="304" height="236">
+                  <img src="images/scharnhorst.jfif" id="scharnhorst" onclick=""  width="304" height="236">
                   <div class="caption">
                     <p> Scharnhorst</p>
                   </div>
@@ -54,7 +178,7 @@
             <div class="col-md-4">
               <div class="thumbnail">
                 <a href="#">
-                  <img src="images/graf.jfif" onclick="alert('descripcion: Crucero Aleman clase Panzerschiff, precio visita guiada=15.000$, lunes a viernes de 8 de la manana a 9 de la tarde.');" width="304" height="236">
+                  <img src="images/graf.jfif" id="graf" onclick="" width="304" height="236">
                   <div class="caption">
                     <p> Graf spee</p>
                   </div>
@@ -69,7 +193,7 @@
             <div class="col-md-4">
               <div class="thumbnail">
                 <a href="#"> 
-                  <img src="images/yamato.jfif" onclick="alert('descripcion: Acorazado Japones clase Yamato, precio visita guiada=60.000$, lunes a viernes de 8 de la manana a 9 de la tarde.');"  width="304" height="236">
+                  <img src="images/yamato.jfif" id="yamato" onclick=""  width="304" height="236">
                   <div class="caption">
                     <p> Yamato</p>
                   </div>
@@ -79,7 +203,7 @@
             <div class="col-md-4">
               <div class="thumbnail">
                 <a href="#">
-                  <img src="images/prinz.jfif"  onclick="alert('descripcion: Crucero Aleman clase Almirante Hipper, precio visita guiada=15.000$, lunes a viernes de 8 de la manana a 9 de la tarde.');"  width="304" height="236">
+                  <img src="images/prinz.jfif"  id="eugen" onclick=""  width="304" height="236">
                   <div class="caption">
                     <p> Prinz eguen</p>
                   </div>
@@ -89,7 +213,7 @@
             <div class="col-md-4">
               <div class="thumbnail">
                 <a href="#">
-                  <img src="images/hood.jfif" onclick="alert('descripcion: Acorazado Britanico clase Almirante, precio visita guiada=40.000$, lunes a viernes de 8 de la manana a 9 de la tarde.');" width="304" height="236">
+                  <img src="images/hood.jfif" id="hood" onclick="" width="304" height="236">
                   <div class="caption">
                     <p> HMS hood</p>
                   </div>
