@@ -7,7 +7,51 @@
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.validate.js"></script>
-        
+        <script>
+          $(function() 
+          {
+            $("#formulario_compra").validate({
+                 rules: {
+                        email: {
+                            required: true,
+                            email: true
+                        },
+                        nombre: "required",
+                        edad: "required",
+                        fecha: "required",
+                        banco: "required"  
+                        
+                    }, //rules
+                messages: {
+                    email: {
+                        required: 'Ingresa tu correo electrónico',
+                        email: 'Formato de correo no válido'
+                    },
+                    nombre: {
+                        required: 'Ingresa un nombre',
+                        minlength: 'Caracteres insuficientes'
+                    },
+                    edad:{
+                        required: 'Ingrese una edad',
+                        minlength: 'Cantidad de digitos insuficiente'
+                    },
+                    rut:{
+                        required: 'Ingrese un rut',
+                        minlength: 'Cantidad de digitos insuficiente'
+                    },
+                    fecha:{
+                        required: 'Seleccione una fecha válida',
+                        min: 'Fecha no corresponde'
+                    },
+                    trabajo: {
+                        required: 'seleccione un puesto al que quiere postular'
+    
+                    }
+                }
+            }); 
+        }); 
+    
+      </script>
     </head>
     <body>
 
@@ -28,6 +72,38 @@
         </nav>
 
         <div class="container">
+          <h3>Ingrese sus datos para postular a trabajo</h3>
+          <form id="formulario_trabajar" action="index.html">
+            <div class="form-group">
+                <label for="nombre">Nombre completo: </label>
+                <input type="text" name="nombre" required class="form-control" id="nombre">
+            </div>
+            <div class="form-group">
+              <label for="rut">Rut: </label>
+              <input type="text" name="rut" required class="form-control" id="rut">
+        
+            <div class="form-group">
+                <label for="email">Email: </label>
+                <input type="text" name="email" required class="form-control" id="email">
+            </div>    
+            <div class="form-group">
+                <label for="fecha">Fecha: </label>
+                <input type="date" name="fecha"  required class="form-control" id="fecha">
+            </div>
+            <div class="form-group">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad"  class="form-control" id="edad">
+            </div>    
+            
+            <h5>¿A que puesto desea postular?</h5>
+            <select id="trabajo" class="form-select" aria-label="Default select example">
+                <option value="1" selected>Guia</option>
+                <option value="2">Guardia</option>
+                <option value="3">Conserje</option>
+              </select>
+
+              <button type="submit" class="btn btn-default">Enviar</button>
+          </form>
         </div>
 
 
